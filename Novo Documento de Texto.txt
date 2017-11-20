@@ -1,0 +1,10 @@
+Exemplos Javascript:
+
+http://jsfiddle.net/lastrose/vkMqR/
+
+https://www.eduonix.com/blog/web-programming-tutorials/learn-build-audio-player-using-html5/
+
+https://www.eduonix.com/courses/Web-Development/Learn-Javascript-And-JQuery-From-Scratch
+
+
+https://www.w3schools.com/js/
