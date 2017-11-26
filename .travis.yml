@@ -1,1 +1,3 @@
 language: java
+notifications:
+    slack: lpro-mainquests:YxIVb4t2r9q92kIurzmVg1MQ
