@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_V3xMUP34Eeebtcmuh6aLZQ" name="Component">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_WI1uMP34Eeebtcmuh6aLZQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_d_Ht8P34Eeebtcmuh6aLZQ" name="Application">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_CK9jIP37Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_g_txIP34Eeebtcmuh6aLZQ" contract="_g_txIP34Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_C1Bz0P37Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_iUfywP34Eeebtcmuh6aLZQ" contract="_iUfywP34Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_DaobQP37Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_zk_NsP35Eeebtcmuh6aLZQ" contract="_zk_NsP35Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_D4SnoP37Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_4PZuYP35Eeebtcmuh6aLZQ" contract="_4PZuYP35Eeebtcmuh6aLZQ"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_FHNHQP36Eeebtcmuh6aLZQ" name="makeByteArray"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_2_fJMP36Eeebtcmuh6aLZQ" name="zipFolders"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_CVSZQP36Eeebtcmuh6aLZQ" name="File">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TSpSQP36Eeebtcmuh6aLZQ" client="_CVSZQP36Eeebtcmuh6aLZQ" supplier="_FHNHQP36Eeebtcmuh6aLZQ" contract="_FHNHQP36Eeebtcmuh6aLZQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VFvAgP36Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_FHNHQP36Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_z-VsYP36Eeebtcmuh6aLZQ" name="Zip">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_7wL4EP36Eeebtcmuh6aLZQ" client="_z-VsYP36Eeebtcmuh6aLZQ" supplier="_2_fJMP36Eeebtcmuh6aLZQ" contract="_2_fJMP36Eeebtcmuh6aLZQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_8iEA8P36Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_2_fJMP36Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ykby0P39Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_3k-J8P38Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_zQQXAP39Eeebtcmuh6aLZQ" client="_d_Ht8P34Eeebtcmuh6aLZQ" supplier="_52W9wP38Eeebtcmuh6aLZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_g_txIP34Eeebtcmuh6aLZQ" name="Login"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_iUfywP34Eeebtcmuh6aLZQ" name="Register"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_r518YP34Eeebtcmuh6aLZQ" name="Database">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_MwVmYP37Eeebtcmuh6aLZQ" client="_r518YP34Eeebtcmuh6aLZQ" supplier="_Q57j4P35Eeebtcmuh6aLZQ" contract="_Q57j4P35Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QMuNsP37Eeebtcmuh6aLZQ" client="_r518YP34Eeebtcmuh6aLZQ" supplier="_O3tNcP35Eeebtcmuh6aLZQ" contract="_O3tNcP35Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QyGysP37Eeebtcmuh6aLZQ" client="_r518YP34Eeebtcmuh6aLZQ" supplier="_NOvEgP35Eeebtcmuh6aLZQ" contract="_NOvEgP35Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RS39cP37Eeebtcmuh6aLZQ" client="_r518YP34Eeebtcmuh6aLZQ" supplier="_LSBgMP35Eeebtcmuh6aLZQ" contract="_LSBgMP35Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_dhNwUP4AEeebtcmuh6aLZQ" client="_r518YP34Eeebtcmuh6aLZQ" supplier="_aLfxsP4AEeebtcmuh6aLZQ" contract="_aLfxsP4AEeebtcmuh6aLZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_vRVcoP34Eeebtcmuh6aLZQ" name="Server">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_UyxWUP38Eeebtcmuh6aLZQ" name="makeByteArray"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_dhQJYP38Eeebtcmuh6aLZQ" name="Zip"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_jtvg0P38Eeebtcmuh6aLZQ" name="Unzip"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_IpS4gP37Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_LSBgMP35Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_JFUtMP37Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_NOvEgP35Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Jr498P37Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_O3tNcP35Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_KQvXcP37Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_Q57j4P35Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_NMAZQP38Eeebtcmuh6aLZQ" name="File">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Y1vcgP38Eeebtcmuh6aLZQ" client="_NMAZQP38Eeebtcmuh6aLZQ" supplier="_UyxWUP38Eeebtcmuh6aLZQ" contract="_UyxWUP38Eeebtcmuh6aLZQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_OChxkP38Eeebtcmuh6aLZQ" name="Zip">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hvmZIP38Eeebtcmuh6aLZQ" client="_OChxkP38Eeebtcmuh6aLZQ" supplier="_dhQJYP38Eeebtcmuh6aLZQ" contract="_dhQJYP38Eeebtcmuh6aLZQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_oFbSwP38Eeebtcmuh6aLZQ" client="_OChxkP38Eeebtcmuh6aLZQ" supplier="_jtvg0P38Eeebtcmuh6aLZQ" contract="_jtvg0P38Eeebtcmuh6aLZQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Z5jC4P38Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_UyxWUP38Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_imXpEP38Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_dhQJYP38Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_pbBMsP38Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_jtvg0P38Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_xSJEgP39Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_52W9wP38Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_yEDCkP39Eeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_3k-J8P38Eeebtcmuh6aLZQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_eMTUsP4AEeebtcmuh6aLZQ" client="_vRVcoP34Eeebtcmuh6aLZQ" supplier="_aLfxsP4AEeebtcmuh6aLZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_LSBgMP35Eeebtcmuh6aLZQ" name="checkLogin"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_NOvEgP35Eeebtcmuh6aLZQ" name="insertRegister"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_O3tNcP35Eeebtcmuh6aLZQ" name="updateFileList"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Q57j4P35Eeebtcmuh6aLZQ" name="shareFiles"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_zk_NsP35Eeebtcmuh6aLZQ" name="Upload"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_4PZuYP35Eeebtcmuh6aLZQ" name="Download"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_y6EhEP38Eeebtcmuh6aLZQ" name="Socket">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_H-brsP39Eeebtcmuh6aLZQ" client="_y6EhEP38Eeebtcmuh6aLZQ" supplier="_3k-J8P38Eeebtcmuh6aLZQ" contract="_3k-J8P38Eeebtcmuh6aLZQ"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JE0E8P39Eeebtcmuh6aLZQ" client="_y6EhEP38Eeebtcmuh6aLZQ" supplier="_52W9wP38Eeebtcmuh6aLZQ" contract="_52W9wP38Eeebtcmuh6aLZQ"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_3k-J8P38Eeebtcmuh6aLZQ" name="Write"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_52W9wP38Eeebtcmuh6aLZQ" name="Read"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_aLfxsP4AEeebtcmuh6aLZQ" name="deleteFiles"/>
+</uml:Model>
