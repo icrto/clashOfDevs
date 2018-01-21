@@ -1,4 +1,19 @@
+dist: trusty
+sudo: false
 language: java
 notifications:
     slack: lpro-mainquests:YxIVb4t2r9q92kIurzmVg1MQ
+befor_install:
+    - ulimit -c unlimited -S
 before_script: cd Client
+cache:
+    directories:
+        - $HOME/.m2
+matrix:
+    include:
+        - os: linux
+        jdk: oraclejdk8
+        addons:
+            apt:
+                packages:
+                    - oracle-java8-installer
