@@ -1,10 +1,8 @@
 package messages;
-
 import java.io.*;
 import java.net.*;
 
 import utils.Parser;
-
 /**
  * @author Clash of Devs
  * @version 1.0
@@ -12,15 +10,16 @@ import utils.Parser;
  *
  */
 public abstract class Message implements Serializable {
-	private static final long serialVersionUID = 1L;
-	protected String username;
 	/**
 	 *  username String that represents the username of the client
 	 *  password String that represents the password of the client
 	 *  command Represents the command of the message
 	 */
+	private static final long serialVersionUID = 1L;
+	protected String username;
 	protected String password;
 	protected String command;
+
 
 	/**
 	 * Constructor to create a new Message.
@@ -33,15 +32,13 @@ public abstract class Message implements Serializable {
 		this.password = password;
 		this.command = command;
 	}
-
 	/**
 	 * Getter for username
 	 * @return username Returns the string containing the username in the object message 
 	 */
 	public String getUsername() {
-		return username;
+		return this.username;
 	}
-
 	/**
 	 * Setter for username
 	 * @param username String username representing the clients' username
@@ -49,15 +46,13 @@ public abstract class Message implements Serializable {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
 	/**
 	 * Getter for password
 	 * @return password Returns the string containing the password in the object message
 	 */
 	public String getPassword() {
-		return username;
+		return this.password;
 	}
-
 	/**
 	 * Setter for password
 	 * @param password String password representing the clients' password
@@ -65,15 +60,13 @@ public abstract class Message implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	/**
 	 * Getter for command
 	 * @return command Returns a string containing the command of the message
 	 */
 	public String getCommand() {
-		return command;
+		return this.command;
 	}
-
 	/**
 	 * Setter for command
 	 * @param command Command to send to the server
@@ -81,7 +74,6 @@ public abstract class Message implements Serializable {
 	public void setCommand(String command) {
 		this.command = command;
 	}
-
 	/**
 	 * Method to receive Server Greeting
 	 * @param in ObjectInputStream 
@@ -108,7 +100,6 @@ public abstract class Message implements Serializable {
 		return false;
 
 	}
-
 	/**
 	 * Method to receive Server Acknowledge.
 	 * @param in ObjectInputStream
@@ -133,7 +124,6 @@ public abstract class Message implements Serializable {
 		return false;
 
 	}
-
 	/**
 	 * Method to send a message through a socket and process the response
 	 * @param hostName host IP address
@@ -157,9 +147,9 @@ public abstract class Message implements Serializable {
 				if(this.getCommand().equals("DOWNLOAD") || this.getCommand().equals("DOWNLOAD FOLDER")) {
 					System.out.println("DOWNLOADING");
 					ActionMessage download = (ActionMessage) in.readObject();
-					Parser parser = new Parser();
-					System.out.println(System.getProperty("user.home") + File.separator + parser.parser(download.getPathname()));
-					File novo = new File(System.getProperty("user.home") + File.separator + parser.parser(download.getPathname()));
+					Parser utils = new Parser();
+					System.out.println(System.getProperty("user.dir") + File.separator + utils.parser(download.getPathname()));
+					File novo = new File(System.getProperty("user.dir") + File.separator + utils.parser(download.getPathname()));
 					if(novo.createNewFile()) {
 						FileOutputStream fileOut = new FileOutputStream(novo);
 						fileOut.write(download.getFile(), 0, download.getFile().length);
@@ -190,7 +180,7 @@ public abstract class Message implements Serializable {
 					}
 					else return (ListFolderMessage) message;
 				}
-				else if(this.getCommand().equals("LIST SHARED") || this.getCommand().equals("LIST SHARING WITH") || this.getCommand().equals("USERS")) {
+				else if(this.getCommand().equals("LIST SHARED") || this.getCommand().equals("LIST SHARING WITH")) {
 					System.out.println("LISTING SHARED FOLDERS");
 					Message message = (Message) in.readObject();
 					if(message.getCommand().equals("ACK")) {
@@ -198,6 +188,20 @@ public abstract class Message implements Serializable {
 					}
 					else return (ListMessage) message;
 
+				}
+				else if(this.getCommand().equals("USERS")) {
+					Message message = (Message) in.readObject();
+					if(message.getCommand().equals("ACK")) {
+						return null;
+					}
+					else return (PermissionMessage) message;
+				}
+				else if(this.getCommand().equals("CHECK EDIT")) {
+					Message message = (Message) in.readObject();
+					if(message.getCommand().equals("ACK")) {
+						return null;
+					}
+					else return (EditMessage) message;
 				}
 				else if(this.getCommand().equals("SHARE")) {
 					AckMessage message = (AckMessage) in.readObject();
